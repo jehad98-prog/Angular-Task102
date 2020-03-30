@@ -1,0 +1,314 @@
+<section  id="home">
+    <div id="header">
+        <h1> view Tasks</h1>
+    </div>
+    <!--Form For Data-->
+    <form class="data">
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <p> Trainee Name:</p>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="First name">
+                  </mat-form-field>
+            </div>
+            <div class="col-sm">
+                <p>University Name:</p>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="University Name">
+                  </mat-form-field>
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-sm">
+                <p> Duration From:</p>
+                <mat-form-field class="example-full-width">
+                    <input matInput [matDatepicker]="picker" placeholder="Duration from">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-sm">
+                <p> Duration To:</p>
+                <mat-form-field class="example-full-width">
+                    <input matInput [matDatepicker]="picker1" placeholder="Duration To">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+              <p>Email :</p>
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="example@gmail.com" >
+              </mat-form-field>
+
+          </div>
+          <div class="col-sm">
+              <p>Department :</p>
+              <mat-form-field class="example-full-width">
+                  <mat-select placeholder="select Department"  >
+                    <mat-option >
+                      IT
+                    </mat-option>
+                    <mat-option >
+                      cloud
+                    </mat-option>
+                    <mat-option >
+                      Microsoft
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+          </div>
+      </div>
+
+     </div> 
+     
+     
+</form>
+<!--End Form-->
+<hr >
+<!--Expansion panel-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <!--hr tasks-->
+      <mat-accordion >
+        <mat-expansion-panel class="panel">
+          <mat-expansion-panel-header >
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <mat-panel-title id="tit1">
+                    HR Tasks(Beginning of internship)
+                  </mat-panel-title>
+                </div>
+                <div class="col">
+                  <mat-panel-description id="tit1">
+                    (pending)
+                  </mat-panel-description>
+
+                </div>
+              </div>
+            </div>
+          </mat-expansion-panel-header>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-ms">
+                <mat-checkbox  >Internship Accpetance letter Issued and deliverd </mat-checkbox>
+              </div>
+              <div class="col">
+                <p> Done By:Hatoon on :xxxxxx</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-ms">
+                <mat-checkbox  >Internship Disclaimer signed</mat-checkbox>
+              </div>
+              <div class="col">
+                <p> Done By:Hatoon on :xxxxxx</p>
+              </div>            
+            </div>
+            <div class="row">
+              <div class="col-ms">
+                <mat-checkbox  >Accsess card Recived</mat-checkbox>
+              </div>             
+            </div>
+          </div>
+      
+          
+          
+          
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <div class="col">
+      <button mat-raised-button color="primary" class="button">Send Reminder</button>
+    </div>
+  </div>
+  <!--End hr tasks-->
+  <div class="row">
+    <div class="col">
+      <!--Hr tasks End of internship-->
+      <mat-accordion>
+        <mat-expansion-panel class="panel12">
+          <mat-expansion-panel-header>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <mat-panel-title id="tit2">
+                    HR Tasks(End of internship)
+                  </mat-panel-title>
+                </div>
+                <div class="col">
+                  <mat-panel-description id="tit2">
+                    (pending)
+                  </mat-panel-description>
+
+                </div>
+              </div>
+            </div>
+            
+            
+          </mat-expansion-panel-header>
+      
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-ms">
+                <mat-checkbox  >Internship Experince letter Issued and deliverd </mat-checkbox>
+              </div>
+              <div class="col">
+                <p> Done By:Hatoon on :xxxxxx</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-ms">
+                <mat-checkbox  >Internship Evaluation from field</mat-checkbox>
+              </div>
+              <div class="col">
+                <p> Done By:Hatoon on :xxxxxx</p>
+              </div>            
+            </div>
+            <div class="row">
+              <div class="col-ms">
+                <mat-checkbox  >Accsess card Returnend</mat-checkbox>
+              </div>             
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          </mat-expansion-panel>
+      </mat-accordion>
+      
+    </div>
+    <div class="col">
+      <button mat-raised-button color="primary" class="button">Send Reminder</button>
+    </div>
+    </div>
+    <!--End of hr tasks end-->
+    <div class="row">
+      <div class="col">
+        <!--TrINERS tASKS-->
+        <mat-accordion>
+          <mat-expansion-panel class="panel">
+            <mat-expansion-panel-header>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col">
+                    <mat-panel-title id="tit1">
+                      Trainers Tasks
+                    </mat-panel-title>
+                  </div>
+                  <div class="col">
+                    <mat-panel-description id="tit1">
+                      (pending)
+                    </mat-panel-description>
+  
+                  </div>
+                </div>
+              </div>
+            </mat-expansion-panel-header>
+        
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-ms">
+                  <mat-checkbox  > Intern's Evaluation completed by(Name1) </mat-checkbox>
+
+                </div>
+                <div class="col">
+                  <p>Done by:------------  on:-----------</p>
+
+                </div>
+                <div class="col">
+                  <button mat-raised-button color="primary" class="button12">View Evaluation Details</button>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-ms">
+                  <mat-checkbox  > Intern's Evaluation completed by(Name2) </mat-checkbox>
+
+                </div>
+                <div class="col">
+                  <p>Done by:------------  on:-----------</p>
+
+                </div>
+                <div class="col">
+                  <button mat-raised-button color="primary" class="button12">View Evaluation Details</button>
+                </div>
+              </div>
+              
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      <div class="col">
+        <button mat-raised-button color="primary" class="button">Send Reminder</button>
+      </div>
+      </div>
+      <!--End trainers task-->
+      <div class="row">
+        <div class="col">
+          <mat-accordion>
+            <!--trainee tasks-->
+            <mat-expansion-panel class="panel12">
+              <mat-expansion-panel-header>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">
+                      <mat-panel-title id="tit2">
+                        Trainee Tasks
+                      </mat-panel-title>
+                    </div>
+                    <div class="col">
+                      <mat-panel-description id="tit2">
+                        (pending)
+                      </mat-panel-description>
+    
+                    </div>
+                  </div>
+                </div>
+              </mat-expansion-panel-header>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-ms">
+                    <mat-checkbox  > Internship Evaluation Field </mat-checkbox>
+                  </div>
+                  <div class="col">
+                    <p>Evaluation Done By:------  on -------</p>
+
+                  </div>
+                  <div class="col">
+                    <button mat-raised-button color="primary" class="button12">View Evaluation Details</button>
+
+                  </div>
+                </div>
+              </div>
+          
+              
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              </mat-expansion-panel>
+          </mat-accordion>
+          <!--end trainee task-->
+        </div>
+        <div class="col">
+          <button mat-raised-button color="primary" class="button">Send Reminder</button>
+        </div>
+        </div>
+  </div>
+
+     
+
+</section>
